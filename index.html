@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the random number</title>
+    <style>
+        .todo-list { list-style-type: none; }
+        .todo-item { display: flex; align-items: center; margin-bottom: 10px; }
+        .todo-item button { margin-left: 10px; }
+    </style>
+</head>
+<body>
+
+    <h1>Guess the random Number</h1>
+
+    <!-- Input and Guess button -->
+    <input type="number" id="guessNumber" placeholder="Enter your number">
+    <button onclick="guessNumber()">Guess</button>
+
+    <!-- random number result -->
+    <p id="randomNumberResult"></p>
+
+    <script src="random.js"></script>
+</body>
+</html>
