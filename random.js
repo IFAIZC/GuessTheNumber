@@ -8,11 +8,15 @@ let userInput = 2;
 
 function checkNumber(userInput, randomNumber) {
     if (userInput === randomNumber) {
-        console.log("You guessed it RIGHT!") 
+        showResult.textContent = "You guessed it RIGHT!";
     } else {
-        console.log("You guessed it WRONG!")
+        showResult.textContent = "You guessed it WRONG!";
     }
 }
+
+//using document.getElementById is kind of like linking the html <p> tag to Javscript, to display output.
+const showResult = document.getElementById("randomNumberResult");
+
 
 console.log("User : " + userInput);
 console.log("Computer : " + randomNumber);
