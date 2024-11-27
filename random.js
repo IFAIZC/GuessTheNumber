@@ -9,6 +9,7 @@ function guessNumber() {
     //if user were to enter other number than the stated value, it will show this message.
     if (isNaN(userInput) || userInput < 1 || userInput > 3) {
         showResult.textContent = "Please enter a valid number between 1 and 3!";
+        showResult.style.color = "orange"; // Color for NA 
         return;
     }
 
@@ -19,8 +20,10 @@ function guessNumber() {
     //using backtick `` allows to pass variable interpolation or multi-line strings.
     if (userInput === randomNumber) {
         showResult.textContent = `You guessed it RIGHT! The number was ${randomNumber}`;
+        showResult.style.color = "green"; // Color for correct guess
     } else {
         showResult.textContent = `You guessed it WRONG! The number was ${randomNumber}`;
+        showResult.style.color = "red"; // Color for incorrect guess
     }
 }
 
