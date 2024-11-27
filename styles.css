@@ -41,7 +41,7 @@ h1 {
     }
 
     #guessButton, #userGuess {
-        width: 90%; /* Full width of screen with padding */
+        width: 50%; /* Full width of screen with padding */
         font-size: 14px;
         height: auto;
     }
