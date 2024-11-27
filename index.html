@@ -4,23 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guess the random number</title>
-    <style>
-        .todo-list { list-style-type: none; }
-        .todo-item { display: flex; align-items: center; margin-bottom: 10px; }
-        .todo-item button { margin-left: 10px; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
+    
+    <h1>GUESS THE RANDOM NUMBER</h1>
 
-    <h1>Guess the random Number</h1>
-
-    <!-- Input and Guess button -->
-    <input type="number" id="userGuess" placeholder="Enter your number" min="1" max="3">
-    <button id="guessButton">Guess</button>
+    <div class="container">
+        <!-- Input and Guess button -->
+        <input type="number" id="userGuess" placeholder=" Enter your number here" min="1" max="3">
+        <button id="guessButton">Guess</button>
+    </div>
 
     <!-- random number result -->
     <p id="randomNumberResult"></p>
-
+    
     <script src="random.js"></script>
 </body>
 </html>

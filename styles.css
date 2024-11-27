@@ -1,0 +1,35 @@
+h1 {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    margin-top: 300px;
+}
+
+#guessButton {
+    width: 100px;  /* Set the width of the button */
+    height: 50px;  /* Set the height of the button */
+    font-size: 15px;  /* Make the text inside the button larger */
+}
+
+#userGuess {
+    width: 225px;  /* Set the width of the button */
+    height: 44px;  /* Set the height of the button */
+    font-size: 15px;  /* Make the text inside the button larger */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#randomNumberResult {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+
+* {
+    font-family: "JetBrains Mono", monospace;
+}
