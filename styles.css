@@ -6,15 +6,15 @@ h1 {
 }
 
 #guessButton {
-    width: 100px;  /* Set the width of the button */
-    height: 50px;  /* Set the height of the button */
-    font-size: 15px;  /* Make the text inside the button larger */
+    width: 100px;
+    height: 50px;
+    font-size: 15px;
 }
 
 #userGuess {
-    width: 225px;  /* Set the width of the button */
-    height: 44px;  /* Set the height of the button */
-    font-size: 15px;  /* Make the text inside the button larger */
+    width: 225px;
+    height: 44px;
+    font-size: 15px;
 }
 
 .container {
@@ -29,7 +29,30 @@ h1 {
     padding-top: 15px;
 }
 
-
 * {
     font-family: "JetBrains Mono", monospace;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 23px;
+        margin-top: 150px;
+    }
+
+    #guessButton, #userGuess {
+        width: 90%; /* Full width of screen with padding */
+        font-size: 14px;
+        height: auto;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    #randomNumberResult {
+        padding-top: 10px;
+    }
 }
