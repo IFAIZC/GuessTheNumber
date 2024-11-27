@@ -1,6 +1,13 @@
 //an array to list out 1-3.
 const number = Array.from({ length: 3 }, (_, i) => i + 1);
 
+//user score.
+let score = 0;
+
+//using document.getElementById is kind of like linking the html <p> tag to Javscript, to display output.
+const showResult = document.getElementById("randomNumberResult");
+const scoreDisplay = document.getElementById("userScore");
+
 function guessNumber() {
 
     //taking user input field from HTML to use for if else later.
@@ -21,14 +28,27 @@ function guessNumber() {
     if (userInput === randomNumber) {
         showResult.textContent = `You guessed it RIGHT! The number was ${randomNumber}`;
         showResult.style.color = "green"; // Color for correct guess
+        updateScore(true); //this updates the updateScore function when userInput is TRUE
     } else {
         showResult.textContent = `You guessed it WRONG! The number was ${randomNumber}`;
         showResult.style.color = "red"; // Color for incorrect guess
+        updateScore(false); //this updates the updateScore function when userInput is FALSE
     }
 }
 
-//using document.getElementById is kind of like linking the html <p> tag to Javscript, to display output.
-const showResult = document.getElementById("randomNumberResult");
+function updateScore(userInput) {
+    if (userInput) {
+        score += 1;
+    } else {
+        score = 0;
+    }
+
+    if (scoreDisplay) {
+        scoreDisplay.textContent = `Your current score is: ${score}`;
+    } else {
+        console.error("element with id 'userScore' not found.");
+    }
+}
 
 //attach the click event listener to the button. purpose of eventlistener is to allow actions to trigger.
 document.getElementById('guessButton').addEventListener('click', guessNumber);
